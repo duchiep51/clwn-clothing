@@ -19,10 +19,10 @@ class SignIn extends React.Component {
     handleSubmit = event => {
         event.preventDefault();
 
-        this.state = {
-            email: '',
-            password: ''
-        }
+        // this.state = {
+        //     email: '',
+        //     password: ''
+        // }
     }
 
     handleChange = event => {
@@ -36,7 +36,7 @@ class SignIn extends React.Component {
                 <h2>I already have an account</h2>
                 <span>Sign in with your email and password</span>
 
-                <form onSumbit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit}>
                     <FormInput name='email' type='email' label='email' handleChange={this.handleChange} value={this.state.email} required/>
                     <FormInput name='password' type='password' label='password' handleChange={this.handleChange} value={this.state.password} required/>
 
